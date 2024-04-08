@@ -5,9 +5,9 @@ import { db } from "@/lib/db";
 import { getOrCreateConversation } from "@/lib/conversation";
 import { currentProfile } from "@/lib/current-profile";
 import { ChatHeader } from "@/components/chat/chat-header";
-/* import { ChatMessages } from "@/components/chat/chat-messages";
+import { ChatMessages } from "@/components/chat/chat-messages";
 import { ChatInput } from "@/components/chat/chat-input";
-import { MediaRoom } from "@/components/media-room"; */
+//import { MediaRoom } from "@/components/media-room";
 
 interface MemberIdPageProps {
   params: {
@@ -55,16 +55,16 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
     memberOne.profileId === profile.id ? memberTwo : memberOne;
 
   return (
-    <div className="bg-white dark:bg-[#313338] flex flex-col h-full">
+    <div className="bg-white dark:bg-[#313338] flex flex-col  h-full">
       <ChatHeader
         imageUrl={otherMember.profile.imageUrl}
         name={otherMember.profile.name}
         serverId={params.serverId}
         type="conversation"
       />
-      {/* {searchParams.video && (
+      {/*  {searchParams.video && (
         <MediaRoom chatId={conversation.id} video={true} audio={true} />
-      )}
+      )} */}
       {!searchParams.video && (
         <>
           <ChatMessages
@@ -89,7 +89,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
             }}
           />
         </>
-      )} */}
+      )}
     </div>
   );
 };
