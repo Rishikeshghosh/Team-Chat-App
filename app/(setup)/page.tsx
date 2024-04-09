@@ -25,11 +25,3 @@ const SetupPage = async () => {
 };
 
 export default SetupPage;
-
-/* import React from "react";
-
-const page = () => {
-  return <div>pag helloe</div>;
-};
-
-export default page; */

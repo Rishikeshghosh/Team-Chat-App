@@ -10,7 +10,10 @@ export default function Error({
   console.log(error);
   return (
     <div>
-      <h2>global home === {error.message}</h2>
+      <h2>
+        Something went wrong in --- app/api/messages
+        {error.message}
+      </h2>
       <button onClick={() => reset()}>Try again</button>
     </div>
   );
